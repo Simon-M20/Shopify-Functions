@@ -3,7 +3,7 @@
 client_id = "c8a2b5f344d179ed05f8e9ec4277f025"
 name = "early-access"
 handle = "early-access"
-application_url = "https://example.com/"
+application_url = "https://pregnancy-repository-paragraphs-trees.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,7 +11,11 @@ embedded = true
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://pregnancy-repository-paragraphs-trees.trycloudflare.com/auth/callback",
+  "https://pregnancy-repository-paragraphs-trees.trycloudflare.com/auth/shopify/callback",
+  "https://pregnancy-repository-paragraphs-trees.trycloudflare.com/api/auth/callback"
+]
 
 [webhooks]
 api_version = "2024-10"
@@ -22,3 +26,7 @@ api_version = "2024-10"
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "fnctns-dev-preview.myshopify.com"
+automatically_update_urls_on_dev = true
